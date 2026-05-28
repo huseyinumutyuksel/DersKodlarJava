@@ -1,15 +1,20 @@
 import java.util.Scanner;
 
+/**
+ * İki kenar uzunluğu ve aralarındaki açı bilinen bir üçgenin alanını hesaplar.
+ *
+ * KONULAR:
+ *  - double veri tipi (ondalıklı sayılar)
+ *  - Math.sin() hazır metodu
+ *  - Scanner ile double (ondalıklı) veri okuma
+ *
+ * FORMÜL:
+ *  Alan = (kenar1 × kenar2 × sin(açı)) / 2
+ *
+ * ÖNEMLİ NOT:
+ *  Math.sin() metodu açıyı radyan cinsinden bekler!
+ *  Derece → Radyan dönüşümü: Math.toRadians(derece) kullanılabilir.
+ *  Örneğin 30 derece → Math.toRadians(30) ≈ 0.5236 radyan
+ */
 public class SinusTeoremi {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Kenar uzunluğunu giriniz:");
-        double kenar1 = scanner.nextDouble();
-        System.out.println("Kenar uzunluğunu giriniz:");
-        double kenar2 = scanner.nextDouble();
-        System.out.println("Kenarlar arası açı değerini giriniz:");
-        double aci = scanner.nextDouble();
-        double alan = kenar1 * kenar2 * Math.sin(aci) / 2;
-        System.out.println("Alan değeri:" + alan);
-    }
-}
+    public st

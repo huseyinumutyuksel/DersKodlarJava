@@ -1,0 +1,157 @@
+# =============================================================================
+# Java Dersleri - Git Ignore Dosyası
+# =============================================================================
+# Bu dosya, Git'in takip ETMEMESİ gereken dosya ve klasörleri belirtir.
+# GitHub'a gönderilmemesi gereken şeyler: derlenmiş dosyalar, IDE ayarları,
+# kişisel öğrenci verileri ve telif hakkı korumalı kitaplar.
+# =============================================================================
+
+
+# -----------------------------------------------------------------------------
+# JAVA DERLENMİŞ DOSYALAR
+# Kaynak (.java) dosyalarından derlenen .class dosyaları ve çıktı klasörleri
+# GitHub'a gönderilmez; bunlar her bilgisayarda yeniden oluşturulabilir.
+# -----------------------------------------------------------------------------
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+
+# IntelliJ IDEA çıktı klasörleri (derlenmiş bytecode)
+out/
+target/
+build/
+
+# Gradle / Maven çıktıları
+.gradle/
+.mvn/
+
+
+# -----------------------------------------------------------------------------
+# INTELLIJ IDEA IDE DOSYALARI
+# IDE'nin kendi çalışma ortamı ayarları - her kişinin bilgisayarında farklı
+# olacağı için paylaşılması sorun çıkarır.
+# -----------------------------------------------------------------------------
+
+# Workspace ayarları (kişiye özel IDE durumu - paylaşılmamalı)
+.idea/workspace.xml
+
+# Görev listeleri (kişiye özel)
+.idea/tasks.xml
+
+# Kullanım istatistikleri
+.idea/usage.statistics.xml
+
+# Sözlük dosyaları
+.idea/dictionaries/
+
+# Hassas proje bağlantı bilgileri içerebilir
+.idea/dataSources/
+.idea/dataSources.local.xml
+.idea/sqlDataSources.xml
+.idea/dynamic.xml
+.idea/uiDesigner.xml
+
+# Shelf klasörü (askıya alınmış değişiklikler - kişiye özel)
+.idea/shelf/
+
+# NOT: Aşağıdaki .idea dosyaları paylaşılabilir (proje ayarları):
+#   .idea/modules.xml     - modül yapısı
+#   .idea/misc.xml        - JDK ayarları
+#   .idea/vcs.xml         - versiyon kontrol ayarları
+#   .idea/.gitignore      - IDE'nin kendi gitignore'u
+#   *.iml                 - modül dosyası
+
+
+# -----------------------------------------------------------------------------
+# KİŞİSEL ÖĞRENCİ VERİLERİ
+# Gerçek öğrenci isimlerini içeren dosyalar KESINLIKLE GitHub'a gitmemeli!
+# Kişisel veri gizliliği (KVKK) açısından bu dosyaları paylaşmak uygun değildir.
+# -----------------------------------------------------------------------------
+
+# Öğrenci isim listeleri (RastgeleOgrenciSecimi projesi)
+students.txt
+selected.txt
+
+# Tüm alt dizinlerde de bu dosyaları gizle
+**/students.txt
+**/selected.txt
+
+# Genel kişisel veri dosyaları
+**/ogrenciler.txt
+**/sinif_listesi.txt
+
+
+# -----------------------------------------------------------------------------
+# TELİF HAKKI KORUNAN KİTAPLAR VE BÜYÜK PDF DOSYALAR
+# Ders materyali olarak kullanılan ticari kitaplar GitHub'a yüklenemez.
+# Ayrıca büyük dosyalar (>100MB) GitHub'ın limitleriyle sorun çıkarır.
+# Öğrencilere referans vermek için README'deki bağlantıları kullanın.
+# -----------------------------------------------------------------------------
+
+# Kitap klasöründeki tüm PDF'ler (telif hakkı korumalı)
+**/Kitap/*.pdf
+**/kitap/*.pdf
+
+# Büyük PDF dosyaları (genel kural - 50MB üzeri dosyalar sorun çıkarır)
+# Not: Hoca tarafından hazırlanan ders notları PDF'leri paylaşılabilir,
+# ticari kitaplar paylaşılamaz.
+
+
+# -----------------------------------------------------------------------------
+# İŞLETİM SİSTEMİ DOSYALARI
+# Her işletim sisteminin oluşturduğu gizli/geçici dosyalar
+# -----------------------------------------------------------------------------
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+
+
+# -----------------------------------------------------------------------------
+# EDITOR VE IDE ARAÇLARI (Diğer)
+# -----------------------------------------------------------------------------
+
+# VS Code
+.vscode/
+
+# Eclipse
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings/
+.springBeans
+.sts4-cache
+bin/
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+
+# -----------------------------------------------------------------------------
+# GEÇICI VE LOG DOSYALARI
+# -----------------------------------------------------------------------------
+*.log
+*.tmp
+*.temp
+*.swp
+*.swo
+logs/

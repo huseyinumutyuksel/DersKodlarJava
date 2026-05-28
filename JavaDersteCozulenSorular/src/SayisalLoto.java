@@ -1,24 +1,16 @@
 import java.util.Random;
 
-public class SayisalLoto {
-    public static void main(String[] args) {
-        int i = 0, j = 0;
-        int[] loto = new int[6];
-        Random random = new Random();
-        while (i < 6) {
-            int n = random.nextInt(50);
-            for (j = 0; j < 6; j++) {
-                if (loto[j] == n) {
-                    break;
-                }
-            }
-            if (j == 6) {
-                loto[i] = n;
-                i++;
-            }
-        }
-        for (i = 0; i < 6; i++) {
-            System.out.print(+loto[i] + "\t");
-        }
-    }
-}
+/**
+ * 0-49 arasından tekrarsız 6 rastgele sayı seçerek sayısal loto kuponu oluşturur.
+ *
+ * KONULAR:
+ *  - Random sınıfı ile rastgele sayı üretme
+ *  - Dizi içinde tekrar kontrolü (iç içe döngü)
+ *  - while döngüsü ile koşullu ilerleme
+ *  - break ifadesi ile döngüden çıkma
+ *
+ * ALGORİTMA:
+ *  1. Dizi dolana kadar rastgele sayı üret
+ *  2. Üretilen sayı dizide zaten var mı kontrol et (iç for döngüsü)
+ *  3. Yoksa diziye ekle (i artar), varsa yeni sayı üret (i artmaz)
+ *  4. Trick: for döngüsü normalde sonuna ulaşırsa j == 6 
