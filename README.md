@@ -52,6 +52,30 @@ JavaDersleri/
 │   └── src/
 │       └── OgrenciSecimi.java      → Dosya okuma/yazma + ArrayList + Random
 │
+├── 2026DersteCozulenSorular/       ← 2025-2026 Bahar dönemi ders kodları
+│   └── src/
+│       ├── DegiskenTanimlama.java       → Değişken tanımı + Scanner temelleri
+│       ├── BolmeMetodu.java             → Bölme/yüzde hesabı (yardımcı sınıf)
+│       ├── IsabetliPasYuzdesi.java      → Başka sınıftan static metot çağrısı
+│       ├── MetotAsiriYukleme.java       → Method overloading (aynı isim, farklı parametre)
+│       ├── IkiBoyutluDizi.java          → 2 boyutlu jagged dizi + iç içe for
+│       ├── EmailAyrastir.java           → String işlemleri (indexOf, substring, equals)
+│       ├── SansliOgrenciSecimi.java     → Dizi + Random ile rastgele seçim
+│       ├── ForIleHaftaGunleri.java      → for-each + rastgele adımlı for
+│       ├── DiziUzerindeIslem.java       → Dizi yazdırma/toplama + indeks sınır kontrolü
+│       ├── SesliHarfSayisi.java         → String → char dönüşümü + harf sayma
+│       ├── Member.java                  → POJO sınıfı (private + getter/setter)
+│       ├── Team.java                    → List<Member> + composition (Member ile birlikte)
+│       ├── Urun.java                    → POJO + @Override toString()
+│       ├── CarpmaWhileMetodu.java       → while(true) + break + sentinel (-1)
+│       ├── CiftSayiYazdirTryCatch.java  → try-catch + InputMismatchException
+│       ├── RadyoFrekansSwitch.java      → switch-case + Math.round() + Random.nextDouble
+│       ├── IndirimOraniHesabi.java      → Paralel diziler + sayaç (counter)
+│       ├── UrunSulama.java              → Tek dosyada birden fazla sınıf + switch
+│       ├── CiftSayiToplami.java         → Vize 14: çift sayıların birikimli toplamı
+│       ├── ParolaKontrol.java           → İç içe if + String.contains()
+│       └── KuraCekimi.java              → for-each + String.equals() + break
+│
 ├── 2025-2026 Bahar Algoritma ve Programlama/
 │   ├── *.pdf                       ← Hoca tarafından hazırlanan ders slaytları
 │   └── Kitap/                      ← Referans kitaplar (GitHub'a yüklenmez)
@@ -107,7 +131,7 @@ String metin  = scanner.next();        // Boşluğa kadar metin oku
 scanner.close();  // Kaynakları serbest bırak
 ```
 
-📂 Örnek dosyalar: `IkiSayiTopla.java`, `AsalSayi.java`, `Kmtomil.java`
+📂 Örnek dosyalar: `IkiSayiTopla.java`, `AsalSayi.java`, `Kmtomil.java`, `DegiskenTanimlama.java`, `IsabetliPasYuzdesi.java`
 
 ---
 
@@ -125,7 +149,7 @@ if (sayi > 0) {
 
 Birden fazla koşul kontrolü için `else if` zinciri kullanılır.
 
-📂 Örnek dosyalar: `VizeSoru2.java`, `DenklemKokleri.java`, `VizeSoru10.java`
+📂 Örnek dosyalar: `VizeSoru2.java`, `DenklemKokleri.java`, `VizeSoru10.java`, `EmailAyrastir.java`, `ParolaKontrol.java`
 
 ---
 
@@ -157,7 +181,7 @@ do {
 } while (sayi != 0);  // 0 girilene kadar devam et
 ```
 
-📂 Örnek dosyalar: `ForlaToplama.java`, `SayiTersten.java`, `HarmonikOrtalama.java`, `TahminOyunu.java`
+📂 Örnek dosyalar: `ForlaToplama.java`, `SayiTersten.java`, `HarmonikOrtalama.java`, `TahminOyunu.java`, `ForIleHaftaGunleri.java`, `CiftSayiToplami.java`, `CarpmaWhileMetodu.java`
 
 ---
 
@@ -187,7 +211,7 @@ public static void mesajYazdir(String mesaj) {
 }
 ```
 
-📂 Örnek dosyalar: `FaktorielHesaplama.java`, `PermutasyonHesabi.java`, `VizeSoru4.java`, `FinalSorulari/Soru1.java`
+📂 Örnek dosyalar: `FaktorielHesaplama.java`, `PermutasyonHesabi.java`, `VizeSoru4.java`, `FinalSorulari/Soru1.java`, `BolmeMetodu.java`, `MetotAsiriYukleme.java`, `SesliHarfSayisi.java`
 
 ---
 
@@ -216,7 +240,7 @@ for (int i = 0; i < dizi.length; i++) {
 | Sıralama               | `Arrays.sort(dizi)` (import java.util.Arrays)    |
 | Ortalama               | `(double) toplam / dizi.length`                  |
 
-📂 Örnek dosyalar: `DiziElemanEkleme.java`, `DiziElemanToplama.java`, `DiziTersten.java`, `DizideArama.java`, `VizeSoru7.java`, `VizeSoru9.java`
+📂 Örnek dosyalar: `DiziElemanEkleme.java`, `DiziElemanToplama.java`, `DiziTersten.java`, `DizideArama.java`, `VizeSoru7.java`, `VizeSoru9.java`, `DiziUzerindeIslem.java`, `IkiBoyutluDizi.java`, `IndirimOraniHesabi.java`
 
 ---
 
@@ -250,7 +274,82 @@ random.nextInt(1, 101)   // 1 ile 100 arasında (101 dahil DEĞİL) — Java 17+
 random.nextDouble()      // 0.0 ile 1.0 arasında ondalıklı
 ```
 
-📂 Örnek dosyalar: `SayisalLoto.java`, `TahminOyunu.java`, `FinalSorulari/Soru1.java`
+📂 Örnek dosyalar: `SayisalLoto.java`, `TahminOyunu.java`, `FinalSorulari/Soru1.java`, `SansliOgrenciSecimi.java`, `RadyoFrekansSwitch.java`, `KuraCekimi.java`
+
+---
+
+### 1️⃣1️⃣ switch - case (Bahar dönemi)
+
+Çok dallı koşullarda `if - else if` zincirinin yerine kullanılır.
+
+```java
+switch (urunAdi) {
+    case "Karpuz":
+        // karpuz için işlem
+        break;             // ← her case break ile bitmeli (yoksa fall-through!)
+    case "Domates":
+        // domates için işlem
+        break;
+    default:               // hiçbiri eşleşmezse buraya düşer
+        System.out.println("Tanımsız ürün.");
+}
+```
+
+📂 Örnek dosyalar: `RadyoFrekansSwitch.java`, `UrunSulama.java`
+
+---
+
+### 1️⃣2️⃣ Try-Catch (Hata Yakalama) (Bahar dönemi)
+
+Çalışma sırasında oluşabilecek hataları (exception) program çökmeden yakalamak için.
+
+```java
+try {
+    int sayi = scanner.nextInt();   // harf girilirse hata fırlatır
+    ciftSayiYazdir(sayi);
+} catch (InputMismatchException e) {
+    System.out.println("Tam sayı girin!");
+} catch (Exception e) {              // spesifikten genele!
+    System.out.println("Bilinmeyen hata: " + e.getMessage());
+}
+```
+
+📂 Örnek dosyalar: `CiftSayiYazdirTryCatch.java`
+
+---
+
+### 1️⃣3️⃣ Nesne Yönelimli Programlama (OOP) (Bahar dönemi)
+
+Sınıf (class) — bir nesnenin şablonudur. Nesne (object) — sınıftan üretilen örnektir.
+
+```java
+public class Urun {
+    private String urunAdi;      // private → dışarıdan doğrudan erişilemez
+    private double fiyat;
+
+    public Urun(String urunAdi, double fiyat) {  // constructor
+        this.urunAdi = urunAdi;                   // this → bu nesnenin alanı
+        this.fiyat = fiyat;
+    }
+
+    public String getUrunAdi() { return urunAdi; }   // getter
+    public void   setFiyat(double f) { this.fiyat = f; } // setter
+}
+
+// Kullanımı:
+Urun u = new Urun("Polo Yaka", 700);
+System.out.println(u.getUrunAdi());
+```
+
+**Kapsülleme (encapsulation):** Alanları `private` yap, dışarıya `getter/setter` aç.
+
+**ArrayList & List:** Boyutu dinamik değişebilen liste.
+```java
+List<Member> members = new ArrayList<>();
+members.add(new Member("Auriel", "light", 10, 1));
+```
+
+📂 Örnek dosyalar: `Member.java`, `Team.java`, `Urun.java`, `UrunSulama.java`
 
 ---
 
@@ -325,6 +424,19 @@ if (ad.equals("Ahmet")) { ... }
 - **Java Sürümü:** JDK 23 (bkz. `qodana.yaml`)
 - **Kod Analizi:** Qodana (JetBrains)
 
+### ⚙️ Java 23 Preview Özellikleri (Bahar dönemi)
+
+`2026DersteCozulenSorular/` altındaki bazı dosyalar **Java 23+ preview** özelliklerini kullanır:
+
+- **`IO.println(...)` / `IO.print(...)`** — `System.out.println` yerine kullanılabilen kısa biçim
+- **Parametresiz `main` metodu** — `public static void main(String[] args)` yerine sadece `static void main()` veya `void main()` yazılabilir (JEP 445/477 - Implicitly Declared Classes & Instance Main Methods)
+
+Bu dosyaları çalıştırırken IntelliJ'de Project Structure → Project SDK olarak **JDK 23+** seçili olmalı ve gerekirse VM seçeneklerine `--enable-preview` eklenmelidir.
+
+📂 Preview kullanan dosyalar: `IkiBoyutluDizi.java`, `ForIleHaftaGunleri.java`, `DiziUzerindeIslem.java`, `CarpmaWhileMetodu.java`, `CiftSayiYazdirTryCatch.java`, `RadyoFrekansSwitch.java`, `CiftSayiToplami.java`, `ParolaKontrol.java`, `KuraCekimi.java`
+
+> Eski (Java 11/17) JDK'larda derlemek için bu dosyalardaki `IO.println` çağrılarını `System.out.println` ile değiştirip `main` metoduna `public static` ve `(String[] args)` eklemeniz gerekir.
+
 ---
 
-*Son güncelleme: Mayıs 2026 — 2025-2026 Bahar Dönemi*
+*Son güncelleme: Mayıs 2026 — 2025-2026 Bahar Dönemi (Algoritma kodları eklendi)*
