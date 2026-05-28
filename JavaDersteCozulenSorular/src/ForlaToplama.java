@@ -18,4 +18,25 @@ import java.util.Scanner;
  */
 public class ForlaToplama {
     public static void main(String[] args) {
-        Scanne
+        Scanner scn = new Scanner(System.in);
+
+        System.out.println("Başlangıç değerini giriniz:");
+        int baslangic = scn.nextInt();
+
+        System.out.println("Bitiş değerini giriniz:");
+        int bitis = scn.nextInt();
+
+        System.out.println("Adım değerini giriniz:");
+        int adim = scn.nextInt();
+
+        int toplam = 0;
+
+        // i başlangıçtan başlar, bitişe ulaşana kadar her seferinde "adim" kadar artar
+        for (int i = baslangic; i <= bitis; i += adim) { // i += adim  →  i = i + adim
+            toplam += i; // toplam = toplam + i  (kümülatif toplam)
+            System.out.println("Ara toplam: " + toplam);
+        }
+
+        System.out.println("Son toplam: " + toplam);
+    }
+}

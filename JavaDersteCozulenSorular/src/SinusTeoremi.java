@@ -17,4 +17,21 @@ import java.util.Scanner;
  *  Örneğin 30 derece → Math.toRadians(30) ≈ 0.5236 radyan
  */
 public class SinusTeoremi {
-    public st
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Birinci kenar uzunluğunu giriniz:");
+        double kenar1 = scanner.nextDouble(); // double → ondalıklı sayı tipi
+
+        System.out.println("İkinci kenar uzunluğunu giriniz:");
+        double kenar2 = scanner.nextDouble();
+
+        System.out.println("Kenarlar arası açı değerini giriniz (radyan cinsinden):");
+        double aci = scanner.nextDouble(); // Açı radyan cinsinden girilmeli
+
+        // Alan = (a × b × sin(C)) / 2  — sinüs teoremi ile alan hesabı
+        double alan = kenar1 * kenar2 * Math.sin(aci) / 2;
+
+        System.out.println("Alan değeri: " + alan);
+    }
+}

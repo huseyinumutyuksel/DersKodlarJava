@@ -27,4 +27,23 @@ public class DiziTersten {
 
         int[] dizi = new int[n]; // n elemanlı dizi tanımla
 
-        // Diziyi 1'den n'e kadar sayılarla d
+        // Diziyi 1'den n'e kadar sayılarla doldur
+        for (int i = 0; i < n; i++) {
+            dizi[i] = i + 1; // indeks 0'dan başlar ama sayılar 1'den başlamalı
+        }
+
+        // Ters çevirme için geçici (temp) dizi oluştur
+        int[] diziTemp = new int[dizi.length]; // dizi.length = n (ikisi de kullanılabilir)
+
+        for (int i = 0; i < dizi.length; i++) {
+            // i=0 ise son elemanı, i=1 ise sondan bir öncekini al...
+            diziTemp[i] = dizi[dizi.length - 1 - i];
+        }
+
+        // Geçici diziyi asıl diziye kopyala ve ekrana yazdır
+        for (int i = 0; i < dizi.length; i++) {
+            dizi[i] = diziTemp[i];
+            System.out.print(dizi[i] + "\t");
+        }
+    }
+}

@@ -23,4 +23,22 @@ public class GeometrikOrtalama {
         double carpım = 1; // Tüm sayıların çarpımını tutacak değişken (başlangıç: 1)
         int sayac = 0;     // Kaç sayı girildiğini sayar
 
-        while (sayi != 0) {   // 0
+        while (sayi != 0) {   // 0 girilene kadar devam et
+            carpım *= sayi;   // Sayıyı toplam çarpıma ekle
+            sayac++;
+            System.out.println("Sayı giriniz. Çıkmak için 0 giriniz:");
+            sayi = scanner.nextDouble();
+            if (sayi != 0) {
+                carpım *= sayi;
+                sayac++;
+                System.out.println("Sayı giriniz. Çıkmak için 0 giriniz:");
+                sayi = scanner.nextDouble();
+            }
+        }
+
+        // Geometrik ortalama = çarpım^(1/n)
+        // Math.pow(a, b) → a^b  ;  1/n = 1.0/sayac (double bölme)
+        double ortalama = Math.pow(carpım, 1.0 / (double) sayac);
+        System.out.println(sayac + " sayının geometrik ortalaması: " + ortalama);
+    }
+}

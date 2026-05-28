@@ -17,4 +17,20 @@ public class TabanUstAlma {
         System.out.println("Taban değerini giriniz:");
         int taban = scn.nextInt();
         System.out.println("Üst değerini giriniz:");
-        int ust = scn.next
+        int ust = scn.nextInt();
+
+        // YÖNTem 1: For döngüsü ile manuel üs alma
+        // sonuc başlangıçta taban'ın kendisi, (ust-1) kez daha çarpılır
+        int sonuc = taban;
+        for (int i = 1; i < ust; i++) {
+            sonuc *= taban; // her adımda taban ile çarp
+        }
+        System.out.println("Döngü ile sonuç: " + sonuc);
+
+        // YÖNTem 2: Math.pow() hazır metodu ile (double döner)
+        double sonucPow = Math.pow(taban, ust);
+        System.out.println("Math.pow() ile sonuç: " + sonucPow);
+    }
+}
+
+

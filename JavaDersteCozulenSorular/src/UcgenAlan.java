@@ -15,4 +15,14 @@ public class UcgenAlan {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Yüksekliği giriniz:");
-        
+        double yukseklik = scanner.nextDouble(); // ondalıklı değer alıyoruz
+
+        System.out.println("Taban uzunluğunu giriniz:");
+        double taban = scanner.nextDouble();
+
+        // Üçgen alan formülü: (taban × yükseklik) / 2
+        double alan = (taban * yukseklik) / 2;
+
+        System.out.println("Alan: " + alan);
+    }
+}
